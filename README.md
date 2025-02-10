@@ -7,12 +7,19 @@ The goal of imbaqu is to allow the user to assess the data imbalance in a data s
 * **imbalanced sample percentage (ISP):** The ISP indicates the percentage of samples that have greater imbalance than a predefined threshold.
  
 If used, please cite:
+
+Wibbeke, J., Rohjans, S. and Rauh, A. (2025), Quantification of Data Imbalance. Expert Systems, 42: e13840. https://doi.org/10.1111/exsy.13840
 ```
-@article{imbaqu,
-  author       = {Wibbeke, Jelke and Rohjans, Sebastian and Rauh, Andreas},
-  title        = {Quantification of Data Imbalance},
-  year         = {XXX},
-  publisher    = {}
+@article{wibbeke2024quantification,
+author = {Wibbeke, Jelke and Rohjans, Sebastian and Rauh, Andreas},
+title = {Quantification of Data Imbalance},
+journal = {Expert Systems},
+volume = {42},
+number = {3},
+pages = {e13840},
+keywords = {imbalanced regression, machine learning, metric, sample weighting data mining},
+doi = {https://doi.org/10.1111/exsy.13840},
+year = {2025}
 }
 ```
 
