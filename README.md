@@ -1,5 +1,5 @@
 # Imbaqu
-This package called "imbaqu" (Imbalance Quantification) implements the methods for the quantification of data imbalance as described in the corresponding article "Quantification of Data Imbalance". The article is available [here add link](www.offis.de).
+This package called "imbaqu" (Imbalance Quantification) implements the methods for the quantification of data imbalance as described in the corresponding article "Quantification of Data Imbalance". The article is available [Open Access](https://onlinelibrary.wiley.com/doi/10.1111/exsy.13840).
 
 The goal of imbaqu is to allow the user to assess the data imbalance in a data set. This can be done either univariate or multivariate. To do so, the density of the data is estimated using kernel density estimation. In addition, the relevance of the data is either to be considered uniform, which is the default case, or can be provided by the user in the form of a probability density function. Subsequently, the data imbalance can be assessed using the provided function of the imbaqu package.
 
