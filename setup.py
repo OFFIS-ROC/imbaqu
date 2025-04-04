@@ -5,13 +5,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='imbaqu',
-    version='0.1.0',
+    version='1.0.0',
     author='Jelke Wibbeke',
     author_email='jelke.wibbeke@offis.de',
     description='A python package for the quantification of data imbalance.',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/yourusername/mypackage',
+    url='https://github.com/OFFIS-ROC/imbaqu',
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     classifiers=[
