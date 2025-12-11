@@ -14,7 +14,15 @@ def imbalanced_sample_percentage(
     lower_bound: None| float = None,
     upper_bound: None| float = None) -> float:
     """
-    Calculate the percentage of imbalanced samples based on the provided criteria.
+    Calculates the percentage of imbalanced samples based on the provided criteria.
+    The criteria are either
+    - ir_bound: According to Equation (4) in the article. All samples are considered to be imbalanced whos Imbalance Ratio is higher than the provided threshold. The minimum achievable Imbalance ratio is 1,
+                which indicates no imbalance to be present. An ir_bound of 2 indicates that only samples are counted which occure twice or half as often as the provided relevance_pdf (Uniform if relevance_pdf=None).
+    - lower_bound/upper_bound: According to Equation (3) in the article. All samples are considered imbalanced whos probability ratio is smaller/higher then the provided bound. If both bounds are provided the
+                the imbalanced sample percentages are summed.
+
+    The Imbalance ratio is the absolute magnitude of the probability ratio lambda. IR = exp(abs(log(lambda(x)))).
+    Thus ir_bound = 2 equals the combined behaviour of lower_bound = 0.5 and upper_bound = 2.
 
     Args:
     - data (pd.Series | pd.DataFrame): Input data for which to compute the probability ratio.
@@ -67,7 +75,7 @@ def mean_imbalance_ratio(
     discrete: bool | list[bool] = False,
     drop_inf_nan: bool = True) -> float:
     '''
-    Computes the mean imbalance ratio (mIR) for given data using empirical and relevance probabilities.
+    Computes the mean imbalance ratio (mIR) for given data using empirical and relevance probabilities (According to Equation (5) in the article).
     Args:
     - data (pd.Series | pd.DataFrame): Input data for which to compute the probability ratio.
     - relevance_pdf (Callable | list[Callable] | None, optional): Probability density function(s) for relevance probability.
